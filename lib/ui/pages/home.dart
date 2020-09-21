@@ -3,7 +3,6 @@ part of 'pages.dart';
 class HomePage extends StatelessWidget {
   final Function onTap;
   final String nama;
-
   const HomePage(this.nama, {Key key, this.onTap});
 
   @override
@@ -93,10 +92,19 @@ class HomePage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
-                    //navigateToDetailMaeteri(context, categories[index]);
-                    context
-                        .bloc<PageBloc>()
-                        .add(GoToDetailMateriPage(categories[index]));
+                    if (categories[index].id == 1) {
+                      context
+                          .bloc<PageBloc>()
+                          .add(GoToDetailMateriMindfull(categories[index]));
+                    } else if (categories[index].id == 2) {
+                      context
+                          .bloc<PageBloc>()
+                          .add(GoToDetailMateriPwb(categories[index]));
+                    } else {
+                      context
+                          .bloc<PageBloc>()
+                          .add(GoToDetailMateriKomunikasi(categories[index]));
+                    }
                   },
                   child: Container(
                     padding: EdgeInsets.all(8),
@@ -140,11 +148,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-/*
-void navigateToDetailMaeteri(BuildContext context, Category category) {
-  Navigator.push(context, MaterialPageRoute(builder: (context) {
-    return DetailMateriPage(
-      category: category,
-    );
-  }));
-}*/

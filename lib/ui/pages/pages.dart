@@ -23,10 +23,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_html/flutter_html.dart';
 
 import '../../bloc/blocs.dart';
-import '../../bloc/blocs.dart';
-import '../../bloc/blocs.dart';
 import '../../models/models.dart';
-// import 'package:audioplayers/audioplayers.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 part 'sign_in.dart';
 part 'splash.dart';
@@ -41,6 +39,10 @@ part 'task.dart';
 // part 'modal_trigger.dart';
 part 'product.dart';
 part 'detail_product.dart';
+
+part 'detail_materi_mindfull.dart';
+part 'detail_materi_pwb.dart';
+part 'detail_materi_komunikasi.dart';
 part 'wrapper.dart';
 part 'home.dart';
 part 'detail_materi.dart';

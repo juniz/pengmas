@@ -28,6 +28,30 @@ class GoToDetailMateriPage extends PageEvent {
   List<Object> get props => [category];
 }
 
+class GoToDetailMateriMindfull extends PageEvent {
+  final Category category;
+  GoToDetailMateriMindfull(this.category);
+
+  @override
+  List<Object> get props => [category];
+}
+
+class GoToDetailMateriPwb extends PageEvent {
+  final Category category;
+  GoToDetailMateriPwb(this.category);
+
+  @override
+  List<Object> get props => [category];
+}
+
+class GoToDetailMateriKomunikasi extends PageEvent {
+  final Category category;
+  GoToDetailMateriKomunikasi(this.category);
+
+  @override
+  List<Object> get props => [category];
+}
+
 class GoToTaskPage extends PageEvent {
   final Materi materi;
   final Category category;

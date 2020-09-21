@@ -33,6 +33,33 @@ class OnDetailMateriPage extends PageState {
   List<Object> get props => [category];
 }
 
+class OnDetailMateriMindfull extends PageState {
+  final Category category;
+
+  OnDetailMateriMindfull(this.category);
+
+  @override
+  List<Object> get props => [category];
+}
+
+class OnDetailMateriPwb extends PageState {
+  final Category category;
+
+  OnDetailMateriPwb(this.category);
+
+  @override
+  List<Object> get props => [category];
+}
+
+class OnDetailMateriKomunikasi extends PageState {
+  final Category category;
+
+  OnDetailMateriKomunikasi(this.category);
+
+  @override
+  List<Object> get props => [category];
+}
+
 class OnTaskPage extends PageState {
   final Materi materi;
   final Category category;

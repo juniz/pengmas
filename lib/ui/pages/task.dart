@@ -51,9 +51,9 @@ class _TaskPageState extends State<TaskPage> {
                         alignment: Alignment.centerLeft,
                         child: GestureDetector(
                           onTap: () {
-                            //context
-                            //  .bloc<PageBloc>()
-                            //  .add(GoToDetailMateriPage());
+                            context
+                                .bloc<PageBloc>()
+                                .add(GoToDetailMateriPage(widget.category));
                           },
                           child: Icon(Icons.arrow_back),
                         ),
