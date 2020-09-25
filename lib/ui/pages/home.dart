@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
                       context
                           .bloc<PageBloc>()
                           .add(GoToDetailMateriPwb(categories[index]));
-                    } else {
+                    } else if (categories[index].id == 3) {
                       context
                           .bloc<PageBloc>()
                           .add(GoToDetailMateriKomunikasi(categories[index]));
