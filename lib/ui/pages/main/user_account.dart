@@ -1,4 +1,4 @@
-part of 'pages.dart';
+part of '../pages.dart';
 
 class UserAccount extends StatelessWidget {
   final String nama;
@@ -14,6 +14,7 @@ class UserAccount extends StatelessWidget {
             child: Container(
           color: Color(0xFFF6F7F9),
         )),
+        //Home_screenWidget(nama)
         HomePage(nama)
       ]),
     );

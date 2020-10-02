@@ -1,4 +1,4 @@
-part of 'pages.dart';
+part of '../pages.dart';
 
 // ignore: must_be_immutable
 class QuestAnswerPage extends StatelessWidget {

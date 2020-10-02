@@ -113,3 +113,53 @@ class OnMoodOnlyPage extends PageState {
   @override
   List<Object> get props => [];
 }
+
+class OnChoicesPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnQuestAnswerUPage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnSadarPageOne extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnMengamatiPageOne extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnPerspektifPageOne extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnKalenderPageOne extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnKesimpulanPageOne extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnTahukahPageOne extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnSuaraPageOne extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnPerkataanPageOne extends PageState {
+  @override
+  List<Object> get props => [];
+}

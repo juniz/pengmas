@@ -49,6 +49,26 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnRateOnlyPage();
     } else if (event is GoToMoodOnlyPage) {
       yield OnMoodOnlyPage();
+    } else if (event is GoToChoicesPage) {
+      yield OnChoicesPage();
+    } else if (event is GoToQuestAnswerUPage) {
+      yield OnQuestAnswerUPage();
+    } else if (event is GoToSadarPageOne) {
+      yield OnSadarPageOne();
+    } else if (event is GoToMengamatiPageOne) {
+      yield OnMengamatiPageOne();
+    } else if (event is GoToPerspektifPageOne) {
+      yield OnPerspektifPageOne();
+    } else if (event is GoToKalenderPageOne) {
+      yield OnKalenderPageOne();
+    } else if (event is GoToKesimpulanPageOne) {
+      yield OnKesimpulanPageOne();
+    } else if (event is GoToTahukahPageOne) {
+      yield OnTahukahPageOne();
+    } else if (event is GoToSuaraPageOne) {
+      yield OnSuaraPageOne();
+    } else if (event is GoToPerkataanPageOne) {
+      yield OnPerkataanPageOne();
     }
   }
 }

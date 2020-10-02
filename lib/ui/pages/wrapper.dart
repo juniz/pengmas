@@ -53,6 +53,12 @@ class Wrapper extends StatelessWidget {
                                                                     : (pageState
                                                                             is OnMoodOnlyPage)
                                                                         ? MoodOnlyPage()
-                                                                        : UserProfile());
+                                                                        : (pageState
+                                                                                is OnChoicesPage)
+                                                                            ? ChoicesQuiz()
+                                                                            : (pageState is OnQuestAnswerUPage)
+                                                                                ? QuestAnswerUPage()
+                                                                                : (pageState is OnSadarPageOne) ? SadarPageOne() : (pageState is OnMengamatiPageOne) ? MengamatiPageOne() : (pageState is OnPerspektifPageOne) ? PerspektifPageOne() : (pageState is OnKalenderPageOne) ? KalenderPageOne() : (pageState is OnKesimpulanPageOne) ? KesimpulanPage() : (pageState is OnTahukahPageOne) ? TahukahPage() : (pageState is OnSuaraPageOne) ? SuaraPageOne() : (pageState is OnPerkataanPageOne) ? PerkataanPage() : UserProfile());
+    ;
   }
 }

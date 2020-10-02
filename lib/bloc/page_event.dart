@@ -105,3 +105,53 @@ class GoToMoodOnlyPage extends PageEvent {
   @override
   List<Object> get props => [];
 }
+
+class GoToChoicesPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToQuestAnswerUPage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToSadarPageOne extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToMengamatiPageOne extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToPerspektifPageOne extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToKalenderPageOne extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToKesimpulanPageOne extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToTahukahPageOne extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToSuaraPageOne extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
+
+class GoToPerkataanPageOne extends PageEvent {
+  @override
+  List<Object> get props => [];
+}
