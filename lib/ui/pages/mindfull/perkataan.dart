@@ -73,7 +73,7 @@ class PerkataanPage extends StatelessWidget {
               margin: EdgeInsets.only(bottom: 10, top: 5, right: 80),
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/images/perkataan.png"))),
+                      image: AssetImage("assets/images/book.png"))),
             ),
             SizedBox(
               height: 16,

@@ -11,7 +11,7 @@ class _SignInPageState extends State<SignInPage> {
 
   bool isEmailValid = false;
   bool isPasswordVaild = false;
-  bool isSigningIn = false;
+  //bool isSigningIn = false;
   bool visible = false;
 
   Future userLogin() async {
@@ -47,6 +47,7 @@ class _SignInPageState extends State<SignInPage> {
       await prefs.setString("email", res[0]['email']);
       await prefs.setString("nama", res[0]['nama']);
       await prefs.setInt("id", res[0]['id']);
+      await prefs.setBool("isSigningIn", true);
       setState(() {
         visible = false;
       });

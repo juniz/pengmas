@@ -95,7 +95,7 @@ class HomePage extends StatelessWidget {
                     if (categories[index].id == 1) {
                       context
                           .bloc<PageBloc>()
-                          .add(GoToDetailMateriMindfull(categories[index]));
+                          .add(GoToDetailTugasMindfull(categories[index]));
                     } else if (categories[index].id == 2) {
                       context
                           .bloc<PageBloc>()

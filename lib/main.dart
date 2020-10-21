@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
             create: (_) => LatihanBloc(latihansRepo: LatihansRepoImpl())),
         BlocProvider(
             create: (_) => PerintahBloc(perintahRepo: PerintahRepoImpl())),
+        BlocProvider(create: (_) => TugasBloc(tugasRepo: TugasRepoImpl())),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

@@ -9,3 +9,4 @@ part 'materi.dart';
 part 'latihan.dart';
 part 'pertanyaan.dart';
 part 'perintah.dart';
+part 'tugas_mindfull.dart';

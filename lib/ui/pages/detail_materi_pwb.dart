@@ -90,7 +90,7 @@ class _DetailMateriPwbState extends State<DetailMateriPwb> {
                           ),
                         ),
                         SizedBox(height: 16),
-                        Text("Mindfull", style: kHeadingextStyle),
+                        Text("Kebahagiaan", style: kHeadingextStyle),
                       ],
                     ),
                   ),

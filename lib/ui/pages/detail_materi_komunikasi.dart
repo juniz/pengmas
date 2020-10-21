@@ -90,7 +90,7 @@ class _DetailMateriKomunikasiState extends State<DetailMateriKomunikasi> {
                           ),
                         ),
                         SizedBox(height: 16),
-                        Text("Mindfull", style: kHeadingextStyle),
+                        Text("Komunikasi", style: kHeadingextStyle),
                       ],
                     ),
                   ),

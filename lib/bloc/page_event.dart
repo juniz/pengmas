@@ -28,9 +28,9 @@ class GoToDetailMateriPage extends PageEvent {
   List<Object> get props => [category];
 }
 
-class GoToDetailMateriMindfull extends PageEvent {
+class GoToDetailTugasMindfull extends PageEvent {
   final Category category;
-  GoToDetailMateriMindfull(this.category);
+  GoToDetailTugasMindfull(this.category);
 
   @override
   List<Object> get props => [category];
@@ -59,6 +59,15 @@ class GoToTaskPage extends PageEvent {
 
   @override
   List<Object> get props => [materi, category];
+}
+
+class GoToTaskMindfullPage extends PageEvent {
+  final TugasMindfull tugas;
+  final Category category;
+  GoToTaskMindfullPage(this.tugas, this.category);
+
+  @override
+  List<Object> get props => [tugas, category];
 }
 
 class GoToByDoingPage extends PageEvent {

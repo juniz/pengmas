@@ -1,27 +1,27 @@
 part of 'pages.dart';
 
 // ignore: must_be_immutable
-class DetailMateriMindfull extends StatefulWidget {
-  Materi materi;
+class DetailTugasMindfull extends StatefulWidget {
+  TugasMindfull tugasMindfull;
   final Category category;
 
-  DetailMateriMindfull(this.category);
+  DetailTugasMindfull(this.category);
 
   @override
-  _DetailMateriMindfullState createState() => _DetailMateriMindfullState();
+  _DetailTugasMindfullState createState() => _DetailTugasMindfullState();
 }
 
-class _DetailMateriMindfullState extends State<DetailMateriMindfull> {
-  MateriBloc materiBloc;
-  OnDetailMateriPage state;
+class _DetailTugasMindfullState extends State<DetailTugasMindfull> {
+  TugasBloc tugasBloc;
+  OnDetailTugasMindfull state;
 
   @override
   void initState() {
     super.initState();
 
     //int id = state.category.id;
-    materiBloc = BlocProvider.of<MateriBloc>(context);
-    materiBloc.add(FetchMateriEvent(widget.category.id));
+    tugasBloc = BlocProvider.of<TugasBloc>(context);
+    tugasBloc.add(FetchTugasEvent(widget.category.id));
   }
 
   @override
@@ -107,9 +107,9 @@ class _DetailMateriMindfullState extends State<DetailMateriMindfull> {
                             ),
                             color: accentColor4,
                           ),
-                          child: BlocListener<MateriBloc, MateriState>(
+                          child: BlocListener<TugasBloc, TugasState>(
                             listener: (context, state) {
-                              if (state is MateriErrorState) {
+                              if (state is TugasErrorState) {
                                 Scaffold.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(state.message),
@@ -117,16 +117,16 @@ class _DetailMateriMindfullState extends State<DetailMateriMindfull> {
                                 );
                               }
                             },
-                            child: BlocBuilder<MateriBloc, MateriState>(
+                            child: BlocBuilder<TugasBloc, TugasState>(
                               // ignore: missing_return
                               builder: (context, state) {
-                                if (state is MateriInitialState) {
+                                if (state is TugasInitialState) {
                                   return buildLoading();
-                                } else if (state is MateriLoadingState) {
+                                } else if (state is TugasLoadingState) {
                                   return buildLoading();
-                                } else if (state is MateriLoadedState) {
-                                  return buildMateriList(state.materi);
-                                } else if (state is MateriErrorState) {
+                                } else if (state is TugasLoadedState) {
+                                  return buildTugasList(state.tugas);
+                                } else if (state is TugasErrorState) {
                                   return buildErrorUi(state.message);
                                 }
                               },
@@ -169,9 +169,9 @@ class _DetailMateriMindfullState extends State<DetailMateriMindfull> {
     );
   }
 
-  Widget buildMateriList(List<Materi> materi) {
+  Widget buildTugasList(List<TugasMindfull> tugas) {
     return ListView.builder(
-        itemCount: materi.length,
+        itemCount: tugas.length,
         itemBuilder: (ctx, pos) {
           // String number;
           // var isDone = false;
@@ -184,14 +184,13 @@ class _DetailMateriMindfullState extends State<DetailMateriMindfull> {
                 color: Colors.yellow,
                 child: ListTile(
                   trailing: Icon(MdiIcons.arrowRightDropCircle),
-                  title: Text(materi[pos].judul, style: blackTextFont),
-                  subtitle: Text(materi[pos].createdAt),
+                  title: Text(tugas[pos].nama, style: blackTextFont),
+                  subtitle: Text(tugas[pos].createdAt),
                   onTap: () {
                     //navigateToMateriDetailPage(context, materi[pos]);
                     if (widget.category.id == 1) {
-                      context
-                          .bloc<PageBloc>()
-                          .add(GoToTaskPage(materi[pos], widget.category));
+                      context.bloc<PageBloc>().add(
+                          GoToTaskMindfullPage(tugas[pos], widget.category));
                     } else {
                       context.bloc<PageBloc>().add(GoToByDoingPage());
                     }
@@ -252,7 +251,7 @@ class _DetailMateriMindfullState extends State<DetailMateriMindfull> {
   }
 }
 
-class BestSellerClipper1 extends CustomClipper<Path> {
+class BestSellerClipper4 extends CustomClipper<Path> {
   @override
   getClip(Size size) {
     var path = Path();

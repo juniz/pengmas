@@ -21,14 +21,16 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnLoginPage();
     } else if (event is GoToMainPage) {
       yield OnMainPage();
-    } else if (event is GoToDetailMateriMindfull) {
-      yield OnDetailMateriMindfull(event.category);
+    } else if (event is GoToDetailTugasMindfull) {
+      yield OnDetailTugasMindfull(event.category);
     } else if (event is GoToDetailMateriPwb) {
       yield OnDetailMateriPwb(event.category);
     } else if (event is GoToDetailMateriKomunikasi) {
       yield OnDetailMateriKomunikasi(event.category);
     } else if (event is GoToDetailMateriPage) {
       yield OnDetailMateriPage(event.category);
+    } else if (event is GoToTaskMindfullPage) {
+      yield OnTaskMindfullPage(event.tugas, event.category);
     } else if (event is GoToTaskPage) {
       yield OnTaskPage(event.materi, event.category);
     } else if (event is GoToByDoingPage) {

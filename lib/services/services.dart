@@ -7,3 +7,4 @@ part 'latihan_services.dart';
 
 part 'materi_repo_services.dart';
 part 'perintah_services.dart';
+part 'tugasmindfull_services.dart';
